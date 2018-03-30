@@ -1,0 +1,229 @@
+[
+  {
+    "daily_menu": {
+      "daily_menu_id": "19591682",
+      "start_date": "2018-03-27 00:00:00",
+      "end_date": "2018-03-27 23:59:59",
+      "name": "",
+      "dishes": [
+        {
+          "dish": {
+            "dish_id": "673625731",
+            "name": "Polévky",
+            "price": ""
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625732",
+            "name": "Slepičí vývar s nudlemi ",
+            "price": "45 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625733",
+            "name": "Gulášová polévka ",
+            "price": "45 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625734",
+            "name": "Speciality Lokálu",
+            "price": ""
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625735",
+            "name": "Smažený sýr vyzrálý šest týdnů s naší tatarskou omáčkou, 150 g ",
+            "price": "169 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625736",
+            "name": "Kuřecí prsa s čerstvou majoránkou, 180 g ",
+            "price": "205 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625737",
+            "name": "Řízek z kuřecího stehna smažený na másle, 120 g ",
+            "price": "199 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625738",
+            "name": "Hlavní jídla",
+            "price": ""
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625739",
+            "name": "Rajská hovězí pečeně, 100 g, houskové knedlíky ",
+            "price": "135 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625740",
+            "name": "Vepřová játra na cibulce, 150 g, dušená rýže ",
+            "price": "109 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625741",
+            "name": "Francouzské brambory, 300 g ",
+            "price": "129 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625742",
+            "name": "Guláš z hovězí kližky, 100 g ",
+            "price": "129 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625743",
+            "name": "Hovězí roštěná na houbách ",
+            "price": "165 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625744",
+            "name": "Moravský vrabec, dušené hlávkové zelí, 120 g ",
+            "price": "125 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625745",
+            "name": "Holandský sekaný řízek, 100 g ",
+            "price": "129 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625746",
+            "name": "Lehká a bezmasá jídla",
+            "price": ""
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625747",
+            "name": "Siven na kmínovém másle, 200 g ",
+            "price": "239 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625748",
+            "name": "Salát s kuřecími prsíčky, 150 g ",
+            "price": "145 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625749",
+            "name": "Šopský salát ",
+            "price": "105 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625750",
+            "name": "Houbový guláš, 150 g ",
+            "price": "145 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625751",
+            "name": "Přílohy",
+            "price": ""
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625752",
+            "name": "Houskové knedlíky ",
+            "price": "35 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625753",
+            "name": "Bramborové knedlíky ",
+            "price": "39 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625754",
+            "name": "Brambory vařené, m. m. ",
+            "price": "39 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625755",
+            "name": "Bramborová kaše ",
+            "price": "45 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625756",
+            "name": "Bramborový salát ",
+            "price": "49 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625757",
+            "name": "Dušené hlávkové zelí ",
+            "price": "45 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625758",
+            "name": "Dušená rýže ",
+            "price": "39 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625759",
+            "name": "Špenát ",
+            "price": "45 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625760",
+            "name": "Kolínka ",
+            "price": "35 Kč"
+          }
+        },
+        {
+          "dish": {
+            "dish_id": "673625761",
+            "name": "Tatarská omáčka ",
+            "price": "35 Kč"
+          }
+        }
+      ]
+    }
+  }
+]

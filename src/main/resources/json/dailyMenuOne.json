@@ -1,0 +1,28 @@
+[
+  {
+    "daily_menu_id": "19578668",
+    "start_date": "2018-03-20 00:00:00",
+    "end_date": "2018-03-20 23:59:59",
+    "name": "test",
+    "dishes": {
+      "dish": {
+        "dish_id": "673071863",
+        "name": "Polévky",
+        "price": "123"
+      }
+    }
+  },
+  {
+    "daily_menu_id": "19578668",
+    "start_date": "2018-03-20 00:00:00",
+    "end_date": "2018-03-20 23:59:59",
+    "name": "test123",
+    "dishes": {
+      "dish": {
+        "dish_id": "673071863",
+        "name": "Polévky",
+        "price": "123"
+      }
+    }
+  }
+]
