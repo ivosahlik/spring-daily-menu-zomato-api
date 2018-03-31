@@ -30,3 +30,11 @@ https://dzone.com/articles/a-regulatory-framework-for-facebook-and-other-plat
 # google map
 https://developers.google.com/maps/documentation/javascript/get-api-key
 
+# UNIT TEST
+
+## integration test
+mvn clean package verify
+
+## test
+mvn clean package test
+

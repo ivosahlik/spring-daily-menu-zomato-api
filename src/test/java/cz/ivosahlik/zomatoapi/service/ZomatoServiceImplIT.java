@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import cz.ivosahlik.zomatoapi.model.DailyMenus;
 import cz.ivosahlik.zomatoapi.service.impl.ZomatoServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
@@ -13,12 +12,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Intellij Idea
  * Created by ivosahlik on 31/03/2018
  */
 @Slf4j
-public class ZomatoServiceImplTest {
+public class ZomatoServiceImplIT {
 
     private ZomatoServiceImpl zomatoService;
 
@@ -35,7 +36,7 @@ public class ZomatoServiceImplTest {
 
         List<String> list = zomatoService.dailyMenuWrapper(inputStream);
 
-        Assert.assertEquals(7, list.size());
+        assertEquals(7, list.size());
     }
 
 
