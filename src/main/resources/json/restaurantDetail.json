@@ -1,0 +1,41 @@
+{
+  "R": {
+    "res_id": 16506246
+  },
+  "apikey": "8911dd7bb2b15478a236b1c549dba198",
+  "id": "16506246",
+  "name": "Lokál",
+  "url": "https://www.zomato.com/praha/lokál-staré-město-praha-1?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+  "location": {
+    "address": "Dlouhá 33, Staré Město, Praha 1",
+    "locality": "Staré Město",
+    "city": "Praha 1",
+    "city_id": 84,
+    "latitude": "50.0906960000",
+    "longitude": "14.4259505000",
+    "zipcode": "",
+    "country_id": 54,
+    "locality_verbose": "Staré Město, Praha 1"
+  },
+  "switch_to_order_menu": 0,
+  "cuisines": "Czech",
+  "average_cost_for_two": 550,
+  "price_range": 3,
+  "currency": "Kč",
+  "offers": [],
+  "thumb": "https://b.zmtcdn.com/data/res_imagery/16506246_CHAIN_60d6826224ad2191e9557dd1a87576e1.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+  "user_rating": {
+    "aggregate_rating": "4.5",
+    "rating_text": "Excellent",
+    "rating_color": "3F7E00",
+    "votes": "238"
+  },
+  "photos_url": "https://www.zomato.com/praha/lokál-staré-město-praha-1/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+  "menu_url": "https://www.zomato.com/praha/lokál-staré-město-praha-1/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+  "featured_image": "https://b.zmtcdn.com/data/res_imagery/16506246_CHAIN_60d6826224ad2191e9557dd1a87576e1.jpg",
+  "has_online_delivery": 0,
+  "is_delivering_now": 0,
+  "deeplink": "zomato://restaurant/16506246",
+  "has_table_booking": 0,
+  "events_url": "https://www.zomato.com/praha/lokál-staré-město-praha-1/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
+}

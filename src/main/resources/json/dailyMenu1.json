@@ -1,0 +1,46 @@
+{
+  "daily_menus": [{"daily_menu":    {
+    "daily_menu_id": "19598365",
+    "start_date": "2018-03-31 00:00:00",
+    "end_date": "2018-03-31 23:59:59",
+    "name": "",
+    "dishes":       [
+      {"dish":          {
+        "dish_id": "673836473",
+        "name": "0,25l Krupicová polévka s vejci (1, 3, 7)",
+        "price": "39 Kč"
+      }},
+      {"dish":          {
+        "dish_id": "673836474",
+        "name": "100g Hovězí nudličky Stroganov, dušená rýže, salát polníček (7) BEZ LEPKU",
+        "price": "159 Kč"
+      }},
+      {"dish":          {
+        "dish_id": "673836475",
+        "name": "180g Králík na smetaně, houskové knedlíky (1, 3, 7, 9)",
+        "price": "149 Kč"
+      }},
+      {"dish":          {
+        "dish_id": "673836476",
+        "name": "150g Smažený mletý kuřecí řízek s bylinkami, bramborová kaše (1, 3, 7)",
+        "price": "139 Kč"
+      }},
+      {"dish":          {
+        "dish_id": "673836477",
+        "name": "120g Vepřový steak na grilu, šťouchané brambory, máslová karotka s kukuřicí (7)",
+        "price": "139 Kč"
+      }},
+      {"dish":          {
+        "dish_id": "673836478",
+        "name": "150g Ledový salát s ředkvičkami",
+        "price": "39 Kč"
+      }},
+      {"dish":          {
+        "dish_id": "673836479",
+        "name": "150g Jehněčí kýta konfitovaná v kořenové zelenině, čerstvý špenát ochucený česnekem, smetanové brambory (1, 7)199",
+        "price": ""
+      }}
+    ]
+  }}],
+  "status": "success"
+}

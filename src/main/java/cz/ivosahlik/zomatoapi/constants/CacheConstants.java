@@ -13,6 +13,9 @@ public class CacheConstants {
 
     public static final String ZOMATO_CACHE_DAILY_MENUS_JSON = "ZOMATO_CACHE_DAILY_MENUS";
 
+    public static final String ZOMATO_CACHE_DAILY_MENUS_JSON_FULL = "ZOMATO_CACHE_DAILY_MENUS";
+
+    public static final String ZOMATO_CACHE_DAILY_MENUS_JSON_WEB = "ZOMATO_CACHE_DAILY_MENUS";
 
 
 }

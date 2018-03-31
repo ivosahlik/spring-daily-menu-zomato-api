@@ -15,4 +15,8 @@ public interface ZomatoService {
 
     List<String> getZomatoDailyFromJsonFile(String restaurantId) throws IOException;
 
+    List<String> getZomatoDailyFromJsonFull(String restaurantId) throws IOException;
+
+    List<String> getZomatoDailyFromJsonWeb(String restaurantId) throws IOException;
+
 }

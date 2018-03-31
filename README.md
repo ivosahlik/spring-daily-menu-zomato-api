@@ -26,3 +26,7 @@ https://springframework.guru/processing-json-jackson/
 
 https://dzone.com/articles/a-regulatory-framework-for-facebook-and-other-plat
 
+
+# google map
+https://developers.google.com/maps/documentation/javascript/get-api-key
+
