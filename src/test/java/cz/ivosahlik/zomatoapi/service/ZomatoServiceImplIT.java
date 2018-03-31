@@ -34,7 +34,7 @@ public class ZomatoServiceImplIT {
         TypeReference<DailyMenus> typeReference = new TypeReference<DailyMenus>() {};
         InputStream inputStream = TypeReference.class.getResourceAsStream("/json/dailyMenu1.json");
 
-        List<String> list = zomatoService.dailyMenuWrapper(inputStream);
+        List<String> list = zomatoService.getDailyMenuList(inputStream);
 
         assertEquals(7, list.size());
     }

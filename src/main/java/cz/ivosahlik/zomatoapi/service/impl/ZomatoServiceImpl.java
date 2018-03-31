@@ -3,29 +3,16 @@ package cz.ivosahlik.zomatoapi.service.impl;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import cz.ivosahlik.zomatoapi.constants.CacheConstants;
-import cz.ivosahlik.zomatoapi.dto.ZomatoDailyMenuDto;
-import cz.ivosahlik.zomatoapi.dto.ZomatoDailyMenuWrapperDto;
-import cz.ivosahlik.zomatoapi.dto.ZomatoDishDto;
-import cz.ivosahlik.zomatoapi.dto.ZomatoDishWrapperDto;
+import cz.ivosahlik.zomatoapi.constants.Constants;
+import cz.ivosahlik.zomatoapi.dto.*;
 import cz.ivosahlik.zomatoapi.model.*;
 import cz.ivosahlik.zomatoapi.service.ZomatoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
-import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.RestTemplate;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.*;
 
 /**
@@ -37,64 +24,7 @@ import java.util.*;
 public class ZomatoServiceImpl implements ZomatoService {
 
     @Autowired
-    private RestTemplate restTemplate;
-
-    @Value("${api.key}")
-    private String apiKey;
-
-    @Value("${rest.api.menu.url}")
-    private String dailyMenusByRestaurantIdUrl;
-
-    private static final String ACCEPT_HEADER_NAME = "Accept";
-    private static final String USER_KEY_HEADER_NAME = "user_key";
-    private static final String REST_API_PARAM_ID = "id";
-
-    private static final String DAILY_MENUS_NODE_NAME = "daily_menus";
-
-
-    /**
-     * This method return JSON String
-     *
-     * @param restaurantId
-     * @return String
-     */
-    @Cacheable(value = CacheConstants.ZOMATO_CACHE_DAILY_MENUS, key = "#restaurantId.concat('-daily-menu')")
-    public String getDailyMenus(String restaurantId) {
-
-        Map<String, String> dailyMenusParams = new HashMap<>();
-        dailyMenusParams.put(REST_API_PARAM_ID, restaurantId);
-
-        HttpEntity<?> entity = getHttpEntityForRestRequest();
-
-        String dailyMenusJSONString = null;
-
-        try {
-            log.info("dailyMenusParams {} " +  dailyMenusParams);
-            dailyMenusJSONString = restTemplate.postForObject(dailyMenusByRestaurantIdUrl, entity, String.class, dailyMenusParams);
-        } catch (HttpClientErrorException ex) {
-            log.info("Restaurant with ID: {0} has 0 daily menus", restaurantId);
-        }
-
-        return dailyMenusJSONString;
-    }
-
-
-    /**
-     *  This method return headers key and value
-     *
-     * @return HttpEntity
-     */
-    private HttpEntity<?> getHttpEntityForRestRequest() {
-
-        MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
-        HttpHeaders headers = new HttpHeaders();
-        headers.add(ACCEPT_HEADER_NAME, MediaType.APPLICATION_JSON_UTF8_VALUE);
-        headers.add(USER_KEY_HEADER_NAME, apiKey);
-
-        return new HttpEntity<>(map, headers);
-
-    }
-
+    private ZomatoDataRestServiceImpl zomatoDataRestService;
 
     /**
      * This method return list daily menus from zomato api
@@ -103,13 +33,13 @@ public class ZomatoServiceImpl implements ZomatoService {
      * @return
      * @throws IOException
      */
-    @Cacheable(value = CacheConstants.ZOMATO_CACHE_DAILY_MENUS_JSON_WEB, key = "#restaurantId.concat('-daily-menu-json')")
+    @Cacheable(value = Constants.ZOMATO_CACHE_DAILY_MENUS_JSON_WEB, key = "#restaurantId.concat('-daily-menu-json')")
     public List<String> getZomatoDailyFromJsonWeb(String restaurantId) throws IOException {
 
-        byte[] bytes = getDailyMenus(restaurantId).getBytes();
+        byte[] bytes = zomatoDataRestService.getDailyMenus(restaurantId).getBytes();
         InputStream inputStream = new ByteArrayInputStream(bytes);
 
-        return dailyMenuWrapper(inputStream);
+        return getDailyMenuList(inputStream);
     }
 
 
@@ -120,13 +50,13 @@ public class ZomatoServiceImpl implements ZomatoService {
      * @return
      * @throws IOException
      */
-    @Cacheable(value = CacheConstants.ZOMATO_CACHE_DAILY_MENUS_JSON_FULL, key = "#restaurantId.concat('-daily-menu-json')")
+    @Cacheable(value = Constants.ZOMATO_CACHE_DAILY_MENUS_JSON_FULL, key = "#restaurantId.concat('-daily-menu-json')")
     public List<String> getZomatoDailyFromJsonFull(String restaurantId) throws IOException {
 
         TypeReference<List<DailyMenus>> typeReference = new TypeReference<List<DailyMenus>>(){};
         InputStream inputStream = TypeReference.class.getResourceAsStream("/json/dailyMenu1.json");
 
-        return dailyMenuWrapper(inputStream);
+        return getDailyMenuList(inputStream);
     }
 
 
@@ -137,7 +67,7 @@ public class ZomatoServiceImpl implements ZomatoService {
      * @return
      * @throws IOException
      */
-    @Cacheable(value = CacheConstants.ZOMATO_CACHE_DAILY_MENUS_JSON, key = "#restaurantId.concat('-daily-menu-json')")
+    @Cacheable(value = Constants.ZOMATO_CACHE_DAILY_MENUS_JSON, key = "#restaurantId.concat('-daily-menu-json')")
     public List<String> getZomatoDailyFromJsonFile(String restaurantId) throws IOException {
 
         List<String> list = new ArrayList<>();
@@ -165,17 +95,47 @@ public class ZomatoServiceImpl implements ZomatoService {
 
 
     /**
+     * This method parse of restaurant json
+     *
+     * @param restaurantId
+     * @return
+     * @throws IOException
+     */
+    public Map<String, String> getZomatoRestaurantFromJsonFile(String restaurantId) throws IOException {
+
+        final String path = "src/main/resources/json/restaurantDetail.json";
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        JsonNode rootNode = mapper.readTree(new File(path));
+
+        Map<String,String> map = mapper.readValue(new FileInputStream(path),Map.class);
+        for (Map.Entry<?, ?> entry : map.entrySet()) {
+            map.put(entry.getKey().toString(), String.valueOf(entry.getValue()));
+        }
+
+        JsonNode locationJson = rootNode.get("location");
+        Map<String, String> locationMap = mapper.convertValue(locationJson, Map.class);
+        for (Map.Entry<String, String> entry : locationMap.entrySet()) {
+            map.put(entry.getKey().toString(), String.valueOf(entry.getValue()));
+        }
+
+        return map;
+    }
+
+
+    /**
      * This method parse of json
      *
      * @param inputStream
      * @return
      * @throws IOException
      */
-    public List<String> dailyMenuWrapper(InputStream inputStream) throws IOException {
+    public List<String> getDailyMenuList(InputStream inputStream) throws IOException {
 
         List<String> list = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
-        JsonNode node = mapper.readTree(inputStream).get(DAILY_MENUS_NODE_NAME);
+        JsonNode node = mapper.readTree(inputStream).get(Constants.DAILY_MENUS_NODE_NAME);
         ZomatoDailyMenuWrapperDto[] dailyMenuWrappers = mapper.readValue(node.toString(), ZomatoDailyMenuWrapperDto[].class);
 
         ZomatoDailyMenuDto zomatoDailyMenuDto = dailyMenuWrappers[0].getDailyMenu();
@@ -183,6 +143,7 @@ public class ZomatoServiceImpl implements ZomatoService {
             ZomatoDishDto data = zomatoDishWrapperDto.getDish();
             list.add(data.getName() + (data.getPrice().length() == 0 ? "" : ", ") + data.getPrice());
         }
+
 
         return list;
     }

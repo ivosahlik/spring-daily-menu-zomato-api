@@ -1,0 +1,19 @@
+
+.card-frame-header {
+    margin-top: 20px;
+    padding-top: 0px;
+}
+
+.card-frame-body {
+    margin-top: 20px;
+    padding-top: 0px;
+}
+
+.resize-map {
+    width:400px;
+    height:400px;
+}
+
+span.font-size-name {
+    font-size: 40px;
+}

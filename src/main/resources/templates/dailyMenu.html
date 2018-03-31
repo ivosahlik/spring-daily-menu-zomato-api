@@ -2,7 +2,25 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Zomato Api</title>
+
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <link rel="stylesheet" href="/static/styles.css" th:href="@{/styles.css}"/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
@@ -10,27 +28,96 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
 
+
 </head>
+
+
 <body>
 
 
-<div>
+<div class="container">
 
-    <div class="card container" style="padding-top: 20px; margin-top: 20px;">
+    <div class="card">
         <h5 class="card-header bg-info">Zomato Api</h5>
         <div class="card-body">
-            <h5 class="card-title">Daily Menu</h5>
-            <table class="table table-hover">
+            <h5 class="card-title">
+                <div class="row">
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
+                        <span class="font-size-name" th:text="${name}"></span>
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                </div>
+            </h5>
 
+            <div class="row">
+                <div class="col">
+                    <p th:text="${locality}"></p>
+                    <p th:text="${city}"></p>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img th:src="${featured_image}" width="500" height="250"/>
+                </div>
+                <div class="col">
+
+                </div>
+                <div class="col">
+                    <div id="map" class="resize-map"></div>
+                </div>
+            </div>
+
+            <table class="table table-hover">
+                <tr>
+                    <br/>
+                    <h5>Daily Menu</h5>
+                </tr>
                 <tr th:each="data: ${daily_menu}">
                     <td th:text="${data}"></td>
                 </tr>
 
             </table>
+
         </div>
     </div>
 
 </div>
+
+<script th:inline="javascript">
+
+    /*<![CDATA[*/
+
+    var latitude = parseFloat(/*[[${latitude}]]*/); 'latitude';
+    var longitude = parseFloat(/*[[${longitude}]]*/); 'longitude';
+
+    console.log(latitude + " " + longitude);
+
+    /*]]>*/
+
+    function initMap() {
+        var myLatLng = {lat: latitude, lng: longitude};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 18,
+            center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
+        });
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFdTZRVLNMfotmhJFnzwI5PEEUtPAYPJ0&callback=initMap"
+        async defer></script>
 
 
 </body>
