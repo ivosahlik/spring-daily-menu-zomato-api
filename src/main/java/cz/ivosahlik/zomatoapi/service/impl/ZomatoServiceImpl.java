@@ -182,7 +182,7 @@ public class ZomatoServiceImpl implements ZomatoService {
         ZomatoDailyMenuDto zomatoDailyMenuDto = dailyMenuWrappers[0].getDailyMenu();
         for (ZomatoDishWrapperDto zomatoDishWrapperDto : zomatoDailyMenuDto.getDishes()) {
             ZomatoDishDto data = zomatoDishWrapperDto.getDish();
-            list.add(data.getName() + " " + data.getPrice());
+            list.add(data.getName() + (data.getPrice().length() == 0 ? "" : ", ") + data.getPrice());
         }
 
         return list;
