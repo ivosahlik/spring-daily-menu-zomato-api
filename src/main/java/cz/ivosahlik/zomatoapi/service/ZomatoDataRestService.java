@@ -8,4 +8,6 @@ public interface ZomatoDataRestService {
 
     String getDailyMenus(String restaurantId);
 
+    String getNearbyRestaurants(String latitude, String longtitude);
+
 }

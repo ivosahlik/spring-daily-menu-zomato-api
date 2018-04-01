@@ -26,9 +26,21 @@ https://springframework.guru/processing-json-jackson/
 
 https://dzone.com/articles/a-regulatory-framework-for-facebook-and-other-plat
 
+https://www.javacodegeeks.com/2013/01/json-deserialization-with-jackson-and-super-type-tokens.html
+
+# thymeleaf
+https://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html
+http://www.baeldung.com/spring-thymeleaf-3-expressions
+
+# spring cache
+http://www.baeldung.com/spring-cache-tutorial
+
 
 # google map
 https://developers.google.com/maps/documentation/javascript/get-api-key
+
+# charts
+http://www.chartjs.org/docs/latest/developers/api.html
 
 # UNIT TEST
 

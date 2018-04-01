@@ -13,9 +13,7 @@ import javax.persistence.Embedded;
 public class ZomatoDailyMenuWrapperDto {
 
     @JsonProperty("daily_menu")
-    @Embedded
     private ZomatoDailyMenuDto dailyMenu;
-
 
     public ZomatoDailyMenuDto getDailyMenu() {
         return dailyMenu;

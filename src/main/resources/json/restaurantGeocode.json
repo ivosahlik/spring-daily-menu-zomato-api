@@ -1,0 +1,430 @@
+{
+  "location": {
+    "entity_type": "subzone",
+    "entity_id": 89981,
+    "title": "Smíchov",
+    "latitude": "50.0701280000",
+    "longitude": "14.3982170000",
+    "city_id": 84,
+    "city_name": "Prague",
+    "country_id": 54,
+    "country_name": "Czech Republic"
+  },
+  "popularity": {
+    "popularity": "4.45",
+    "nightlife_index": "4.23",
+    "nearby_res": [
+      "16505924",
+      "16506064",
+      "16511100",
+      "16509899",
+      "16521798",
+      "16507605",
+      "16508716",
+      "16521678",
+      "16511989"
+    ],
+    "top_cuisines": [
+      "Czech",
+      "Cafe",
+      "Drinks Only",
+      "Finger Food",
+      "Italian"
+    ],
+    "popularity_res": "100",
+    "nightlife_res": "10",
+    "subzone": "Smíchov",
+    "subzone_id": 89981,
+    "city": "Prague"
+  },
+  "link": "https://www.zomato.com/praha/smíchov-restaurants",
+  "nearby_restaurants": [
+    {
+      "restaurant": {
+        "R": {
+          "res_id": 16505924
+        },
+        "apikey": "8911dd7bb2b15478a236b1c549dba198",
+        "id": "16505924",
+        "name": "Odpočívadlo",
+        "url": "https://www.zomato.com/praha/odpočívadlo-smíchov-praha-5?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+        "location": {
+          "address": "Na Bělidle 40, Smíchov, Praha 5",
+          "locality": "Smíchov",
+          "city": "Praha 5",
+          "city_id": 84,
+          "latitude": "50.0717044000",
+          "longitude": "14.4048991000",
+          "zipcode": "",
+          "country_id": 54,
+          "locality_verbose": "Smíchov, Praha 5"
+        },
+        "switch_to_order_menu": 0,
+        "cuisines": "Czech, Grill, Burger",
+        "average_cost_for_two": 550,
+        "price_range": 3,
+        "currency": "Kč",
+        "offers": [],
+        "thumb": "https://b.zmtcdn.com/data/res_imagery/16505924_RESTAURANT_e7cc5ee49a793b1bdfd0e6953a8ed073_c.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+        "user_rating": {
+          "aggregate_rating": "4.2",
+          "rating_text": "Very Good",
+          "rating_color": "5BA829",
+          "votes": "123"
+        },
+        "photos_url": "https://www.zomato.com/praha/odpočívadlo-smíchov-praha-5/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+        "menu_url": "https://www.zomato.com/praha/odpočívadlo-smíchov-praha-5/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+        "featured_image": "https://b.zmtcdn.com/data/res_imagery/16505924_RESTAURANT_e7cc5ee49a793b1bdfd0e6953a8ed073_c.jpg",
+        "has_online_delivery": 0,
+        "is_delivering_now": 0,
+        "deeplink": "zomato://restaurant/16505924",
+        "has_table_booking": 0,
+        "events_url": "https://www.zomato.com/praha/odpočívadlo-smíchov-praha-5/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
+      }
+    },
+    {
+      "restaurant": {
+        "R": {
+          "res_id": 16506064
+        },
+        "apikey": "8911dd7bb2b15478a236b1c549dba198",
+        "id": "16506064",
+        "name": "T.G.I. Friday's",
+        "url": "https://www.zomato.com/praha/t-g-i-fridays-1-smíchov-praha-5?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+        "location": {
+          "address": "Nádražní 110, Smíchov, Praha 5",
+          "locality": "Smíchov",
+          "city": "Praha 5",
+          "city_id": 84,
+          "latitude": "50.0704566000",
+          "longitude": "14.4050359000",
+          "zipcode": "15000",
+          "country_id": 54,
+          "locality_verbose": "Smíchov, Praha 5"
+        },
+        "switch_to_order_menu": 0,
+        "cuisines": "Burger, Steak, American",
+        "average_cost_for_two": 1000,
+        "price_range": 4,
+        "currency": "Kč",
+        "offers": [],
+        "thumb": "https://b.zmtcdn.com/data/res_imagery/16506064_RESTAURANT_8a5f2e570a4bc6c6e1e6cf68113995e5_c.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+        "user_rating": {
+          "aggregate_rating": "4.4",
+          "rating_text": "Very Good",
+          "rating_color": "5BA829",
+          "votes": "112"
+        },
+        "photos_url": "https://www.zomato.com/praha/t-g-i-fridays-1-smíchov-praha-5/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+        "menu_url": "https://www.zomato.com/praha/t-g-i-fridays-1-smíchov-praha-5/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+        "featured_image": "https://b.zmtcdn.com/data/res_imagery/16506064_RESTAURANT_8a5f2e570a4bc6c6e1e6cf68113995e5_c.jpg",
+        "has_online_delivery": 0,
+        "is_delivering_now": 0,
+        "deeplink": "zomato://restaurant/16506064",
+        "has_table_booking": 0,
+        "events_url": "https://www.zomato.com/praha/t-g-i-fridays-1-smíchov-praha-5/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
+      }
+    },
+    {
+      "restaurant": {
+        "R": {
+          "res_id": 16511100
+        },
+        "apikey": "8911dd7bb2b15478a236b1c549dba198",
+        "id": "16511100",
+        "name": "Café Savoy",
+        "url": "https://www.zomato.com/praha/café-savoy-malá-strana-praha-5?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+        "location": {
+          "address": "Vítězná 5, Malá Strana, Praha 5",
+          "locality": "Malá Strana",
+          "city": "Praha 5",
+          "city_id": 84,
+          "latitude": "50.0810277778",
+          "longitude": "14.4070527778",
+          "zipcode": "",
+          "country_id": 54,
+          "locality_verbose": "Malá Strana, Praha 5"
+        },
+        "switch_to_order_menu": 0,
+        "cuisines": "Cafe",
+        "average_cost_for_two": 1100,
+        "price_range": 4,
+        "currency": "Kč",
+        "offers": [],
+        "thumb": "https://b.zmtcdn.com/data/res_imagery/16511100_RESTAURANT_a83ef2f359a5bc1d9443a6d310162914.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+        "user_rating": {
+          "aggregate_rating": "4.4",
+          "rating_text": "Very Good",
+          "rating_color": "5BA829",
+          "votes": "110"
+        },
+        "photos_url": "https://www.zomato.com/praha/café-savoy-malá-strana-praha-5/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+        "menu_url": "https://www.zomato.com/praha/café-savoy-malá-strana-praha-5/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+        "featured_image": "https://b.zmtcdn.com/data/res_imagery/16511100_RESTAURANT_a83ef2f359a5bc1d9443a6d310162914.jpg",
+        "has_online_delivery": 0,
+        "is_delivering_now": 0,
+        "deeplink": "zomato://restaurant/16511100",
+        "has_table_booking": 0,
+        "events_url": "https://www.zomato.com/praha/café-savoy-malá-strana-praha-5/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
+      }
+    },
+    {
+      "restaurant": {
+        "R": {
+          "res_id": 16509899
+        },
+        "apikey": "8911dd7bb2b15478a236b1c549dba198",
+        "id": "16509899",
+        "name": "Wine food market",
+        "url": "https://www.zomato.com/praha/wine-food-market-smíchov-praha-5?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+        "location": {
+          "address": "Strakonická 1, Smíchov, Praha 5",
+          "locality": "Smíchov",
+          "city": "Praha 5",
+          "city_id": 84,
+          "latitude": "50.0631044154",
+          "longitude": "14.4102272764",
+          "zipcode": "",
+          "country_id": 54,
+          "locality_verbose": "Smíchov, Praha 5"
+        },
+        "switch_to_order_menu": 0,
+        "cuisines": "Italian, Seafood, Fresh Fish",
+        "average_cost_for_two": 500,
+        "price_range": 3,
+        "currency": "Kč",
+        "offers": [],
+        "thumb": "https://b.zmtcdn.com/data/res_imagery/16509899_RESTAURANT_22c218fd5e0a25493f0373d1d4702271.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+        "user_rating": {
+          "aggregate_rating": "4.4",
+          "rating_text": "Very Good",
+          "rating_color": "5BA829",
+          "votes": "113"
+        },
+        "photos_url": "https://www.zomato.com/praha/wine-food-market-smíchov-praha-5/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+        "menu_url": "https://www.zomato.com/praha/wine-food-market-smíchov-praha-5/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+        "featured_image": "https://b.zmtcdn.com/data/res_imagery/16509899_RESTAURANT_22c218fd5e0a25493f0373d1d4702271.jpg",
+        "has_online_delivery": 0,
+        "is_delivering_now": 0,
+        "deeplink": "zomato://restaurant/16509899",
+        "has_table_booking": 0,
+        "events_url": "https://www.zomato.com/praha/wine-food-market-smíchov-praha-5/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
+      }
+    },
+    {
+      "restaurant": {
+        "R": {
+          "res_id": 16521798
+        },
+        "apikey": "8911dd7bb2b15478a236b1c549dba198",
+        "id": "16521798",
+        "name": "Delmart",
+        "url": "https://www.zomato.com/praha/delmart-smíchov-praha-5?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+        "location": {
+          "address": "Nádražní 25, Smíchov, Praha 5",
+          "locality": "Smíchov",
+          "city": "Praha 5",
+          "city_id": 84,
+          "latitude": "50.0710640000",
+          "longitude": "14.4041230000",
+          "zipcode": "",
+          "country_id": 54,
+          "locality_verbose": "Smíchov, Praha 5"
+        },
+        "switch_to_order_menu": 0,
+        "cuisines": "Healthy Food, Burger",
+        "average_cost_for_two": 300,
+        "price_range": 2,
+        "currency": "Kč",
+        "offers": [],
+        "thumb": "https://b.zmtcdn.com/data/res_imagery/16521798_RESTAURANT_e93f1104e241c0ebba7018cfc707e974.jpeg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+        "user_rating": {
+          "aggregate_rating": "4.3",
+          "rating_text": "Very Good",
+          "rating_color": "5BA829",
+          "votes": "105"
+        },
+        "photos_url": "https://www.zomato.com/praha/delmart-smíchov-praha-5/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+        "menu_url": "https://www.zomato.com/praha/delmart-smíchov-praha-5/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+        "featured_image": "https://b.zmtcdn.com/data/res_imagery/16521798_RESTAURANT_e93f1104e241c0ebba7018cfc707e974.jpeg",
+        "has_online_delivery": 0,
+        "is_delivering_now": 0,
+        "deeplink": "zomato://restaurant/16521798",
+        "has_table_booking": 0,
+        "events_url": "https://www.zomato.com/praha/delmart-smíchov-praha-5/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
+      }
+    },
+    {
+      "restaurant": {
+        "R": {
+          "res_id": 16507605
+        },
+        "apikey": "8911dd7bb2b15478a236b1c549dba198",
+        "id": "16507605",
+        "name": "Lavande",
+        "url": "https://www.zomato.com/lavande?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+        "location": {
+          "address": "Lidická 2, Smíchov, Praha 5",
+          "locality": "Smíchov",
+          "city": "Praha 5",
+          "city_id": 84,
+          "latitude": "50.0727440000",
+          "longitude": "14.4099470000",
+          "zipcode": "",
+          "country_id": 54,
+          "locality_verbose": "Smíchov, Praha 5"
+        },
+        "switch_to_order_menu": 0,
+        "cuisines": "Czech, French",
+        "average_cost_for_two": 880,
+        "price_range": 4,
+        "currency": "Kč",
+        "offers": [],
+        "thumb": "https://b.zmtcdn.com/data/res_imagery/16507605_RESTAURANT_16e91c8b795ab0c5c2337ae811e6e94e_c.jpeg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+        "user_rating": {
+          "aggregate_rating": "4.4",
+          "rating_text": "Very Good",
+          "rating_color": "5BA829",
+          "votes": "100"
+        },
+        "photos_url": "https://www.zomato.com/lavande/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+        "menu_url": "https://www.zomato.com/lavande/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+        "featured_image": "https://b.zmtcdn.com/data/res_imagery/16507605_RESTAURANT_16e91c8b795ab0c5c2337ae811e6e94e_c.jpeg",
+        "has_online_delivery": 0,
+        "is_delivering_now": 0,
+        "deeplink": "zomato://restaurant/16507605",
+        "has_table_booking": 0,
+        "events_url": "https://www.zomato.com/lavande/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
+      }
+    },
+    {
+      "restaurant": {
+        "R": {
+          "res_id": 16508716
+        },
+        "apikey": "8911dd7bb2b15478a236b1c549dba198",
+        "id": "16508716",
+        "name": "Bejzment",
+        "url": "https://www.zomato.com/praha/bejzment-smíchov-praha-5?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+        "location": {
+          "address": "Lesnická 8, Smíchov, Praha 5",
+          "locality": "Smíchov",
+          "city": "Praha 5",
+          "city_id": 84,
+          "latitude": "50.0739050000",
+          "longitude": "14.4083380000",
+          "zipcode": "",
+          "country_id": 54,
+          "locality_verbose": "Smíchov, Praha 5"
+        },
+        "switch_to_order_menu": 0,
+        "cuisines": "Burger, American, Grill",
+        "average_cost_for_two": 600,
+        "price_range": 3,
+        "currency": "Kč",
+        "offers": [],
+        "thumb": "https://b.zmtcdn.com/data/res_imagery/16508716_RESTAURANT_c0a6a7ba04f8bf0253de938ca12deb6e.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+        "user_rating": {
+          "aggregate_rating": "4.3",
+          "rating_text": "Very Good",
+          "rating_color": "5BA829",
+          "votes": "152"
+        },
+        "photos_url": "https://www.zomato.com/praha/bejzment-smíchov-praha-5/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+        "menu_url": "https://www.zomato.com/praha/bejzment-smíchov-praha-5/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+        "featured_image": "https://b.zmtcdn.com/data/res_imagery/16508716_RESTAURANT_c0a6a7ba04f8bf0253de938ca12deb6e.jpg",
+        "has_online_delivery": 0,
+        "is_delivering_now": 0,
+        "deeplink": "zomato://restaurant/16508716",
+        "has_table_booking": 0,
+        "events_url": "https://www.zomato.com/praha/bejzment-smíchov-praha-5/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
+      }
+    },
+    {
+      "restaurant": {
+        "R": {
+          "res_id": 16521678
+        },
+        "apikey": "8911dd7bb2b15478a236b1c549dba198",
+        "id": "16521678",
+        "name": "Modrý zub",
+        "url": "https://www.zomato.com/praha/modrý-zub-smíchov-praha-5?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+        "location": {
+          "address": "Stroupežnického 14, Smíchov, Praha 5",
+          "locality": "Smíchov",
+          "city": "Praha 5",
+          "city_id": 84,
+          "latitude": "50.0700670000",
+          "longitude": "14.4032980000",
+          "zipcode": "",
+          "country_id": 54,
+          "locality_verbose": "Smíchov, Praha 5"
+        },
+        "switch_to_order_menu": 0,
+        "cuisines": "Thai, Asian",
+        "average_cost_for_two": 900,
+        "price_range": 4,
+        "currency": "Kč",
+        "offers": [],
+        "thumb": "https://b.zmtcdn.com/data/res_imagery/16521678_RESTAURANT_4ee3f6d00ec8ed889cd5f42b71f044ef.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+        "user_rating": {
+          "aggregate_rating": "4.2",
+          "rating_text": "Very Good",
+          "rating_color": "5BA829",
+          "votes": "83"
+        },
+        "photos_url": "https://www.zomato.com/praha/modrý-zub-smíchov-praha-5/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+        "menu_url": "https://www.zomato.com/praha/modrý-zub-smíchov-praha-5/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+        "featured_image": "https://b.zmtcdn.com/data/res_imagery/16521678_RESTAURANT_4ee3f6d00ec8ed889cd5f42b71f044ef.jpg",
+        "has_online_delivery": 0,
+        "is_delivering_now": 0,
+        "deeplink": "zomato://restaurant/16521678",
+        "has_table_booking": 0,
+        "events_url": "https://www.zomato.com/praha/modrý-zub-smíchov-praha-5/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
+      }
+    },
+    {
+      "restaurant": {
+        "R": {
+          "res_id": 16511989
+        },
+        "apikey": "8911dd7bb2b15478a236b1c549dba198",
+        "id": "16511989",
+        "name": "Angelato",
+        "url": "https://www.zomato.com/praha/angelato-malá-strana-praha-1?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+        "location": {
+          "address": "Újezd 24, Malá Strana, Praha 1",
+          "locality": "Malá Strana",
+          "city": "Praha 1",
+          "city_id": 84,
+          "latitude": "50.0820800000",
+          "longitude": "14.4045900000",
+          "zipcode": "",
+          "country_id": 54,
+          "locality_verbose": "Malá Strana, Praha 1"
+        },
+        "switch_to_order_menu": 0,
+        "cuisines": "Ice Cream, Cafe",
+        "average_cost_for_two": 300,
+        "price_range": 2,
+        "currency": "Kč",
+        "offers": [],
+        "thumb": "https://b.zmtcdn.com/data/res_imagery/16511989_RESTAURANT_726cd2245285ab10f55e6b1a30ed4aa3.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+        "user_rating": {
+          "aggregate_rating": "4.8",
+          "rating_text": "Excellent",
+          "rating_color": "3F7E00",
+          "votes": "114"
+        },
+        "photos_url": "https://www.zomato.com/praha/angelato-malá-strana-praha-1/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+        "menu_url": "https://www.zomato.com/praha/angelato-malá-strana-praha-1/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+        "featured_image": "https://b.zmtcdn.com/data/res_imagery/16511989_RESTAURANT_726cd2245285ab10f55e6b1a30ed4aa3.jpg",
+        "has_online_delivery": 0,
+        "is_delivering_now": 0,
+        "deeplink": "zomato://restaurant/16511989",
+        "has_table_booking": 0,
+        "events_url": "https://www.zomato.com/praha/angelato-malá-strana-praha-1/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
+      }
+    }
+  ]
+}

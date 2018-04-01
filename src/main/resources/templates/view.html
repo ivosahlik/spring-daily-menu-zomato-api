@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Zomato Api</title>
+
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <link rel="stylesheet" href="/static/styles.css" th:href="@{/styles.css}"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+    <div class="card">
+        <h5 class="card-header bg-info">Zomato Api</h5>
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+
+            <div th:each="restaurant: ${restaurants}">
+
+                <!--<span th:text="${#strings.length(restaurant.dailyMenus)}"></span>-->
+
+                <div th:if="${#strings.length(restaurant.dailyMenus)} &gt; 2">
+                    <span th:text="${restaurant.name}"></span>
+
+                    <div th:each="dailyMenu : ${restaurant.dailyMenus}">
+
+                        <div th:each="dishWrapper : ${dailyMenu.dishes}">
+
+                            <span th:text="${dishWrapper.dish.name}"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

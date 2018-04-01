@@ -12,7 +12,6 @@ import java.util.List;
  * Created by ivosahlik on 22/03/2018
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Embeddable
 public class ZomatoDailyMenuDto {
 
     @JsonProperty("daily_menu_id")
@@ -21,9 +20,7 @@ public class ZomatoDailyMenuDto {
     @JsonProperty("name")
     private String name;
 
-    @Embedded
     private List<ZomatoDishWrapperDto> dishes;
-
 
 
     public int getId() {
@@ -46,7 +43,7 @@ public class ZomatoDailyMenuDto {
         return dishes;
     }
 
-    public void setDishes(List<ZomatoDishWrapperDto> dishes) {
+    public void addDishes(List<ZomatoDishWrapperDto> dishes) {
         this.dishes = dishes;
     }
 }

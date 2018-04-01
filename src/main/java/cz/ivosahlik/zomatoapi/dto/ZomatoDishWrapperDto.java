@@ -11,11 +11,9 @@ import javax.persistence.Embedded;
  * Created by ivosahlik on 22/03/2018
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Embeddable
 public class ZomatoDishWrapperDto {
 
     @JsonProperty("dish")
-    @Embedded
     private ZomatoDishDto dish;
 
 

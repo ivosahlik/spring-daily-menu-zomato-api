@@ -17,7 +17,13 @@ public class Constants {
 
     public static final String ZOMATO_CACHE_DAILY_MENUS_JSON_WEB = "ZOMATO_CACHE_DAILY_MENUS";
 
+    public static final String ZOMATO_CACHE_NEARBY_RESTAURANT = "ZOMATO_CACHE_NEARBY_RESTAURANT";
+
     public static final String DAILY_MENUS_NODE_NAME = "daily_menus";
+
+    public static final String RESTAURANT_NODE_NAME = "restaurants";
+
+    public static final String NEARBY_RESTAURANTS_NODE_NAME = "nearby_restaurants";
 
 
 }
