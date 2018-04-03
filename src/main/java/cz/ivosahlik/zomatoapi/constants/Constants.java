@@ -25,5 +25,7 @@ public class Constants {
 
     public static final String NEARBY_RESTAURANTS_NODE_NAME = "nearby_restaurants";
 
+    public static final String JSON_EMPTY_ARRAY = "[]";
+
 
 }

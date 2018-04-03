@@ -1,5 +1,6 @@
 package cz.ivosahlik.zomatoapi.controller;
 
+import cz.ivosahlik.zomatoapi.enumeration.GeoCodeEnum;
 import cz.ivosahlik.zomatoapi.service.ZomatoService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -30,12 +31,13 @@ public class ZomatoController {
     @GetMapping("/api")
     public String zopatoApi(Model model) throws IOException {
 
-//        model.addAttribute("daily_menu", zomatoService.getZomatoDailyFromJsonFile("16506246"));
-//        model.addAttribute("daily_menu", zomatoService.getZomatoDailyFromJsonFull("16506246"));
-//        model.addAttribute("daily_menu", zomatoService.getZomatoDailyFromJsonWeb("16506246"));
-//        model.addAttribute("daily_menu", zomatoService.getZomatoDailyFromJsonWeb("16505933"));
+        model.addAttribute("restaurants",
+                zomatoService.getZomatoNearbyRestaurantFromRestApi(GeoCodeEnum.PRAHA.getLatitude(),GeoCodeEnum.PRAHA.getLongtitude()));
 
-        model.addAttribute("restaurants", zomatoService.getZomatoNearbyRestaurantFromRestApi("50.070008","14.403369"));
+//        model.addAttribute("daily_menu", zomatoService.getZomatoDailyMenuFromJsonFile("16506246"));
+//        model.addAttribute("daily_menu", zomatoService.getZomatoDailyMenuFromJsonFull("16506246"));
+//        model.addAttribute("daily_menu", zomatoService.getZomatoDailyMenuFromJsonWeb("16506246"));
+//        model.addAttribute("daily_menu", zomatoService.getZomatoDailyMenuFromJsonWeb("16505933"));
 
 //        Map<String, String> map = zomatoService.getZomatoRestaurantFromJsonFile("16506246");
 //

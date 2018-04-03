@@ -12,9 +12,9 @@ import java.util.Map;
  */
 public interface ZomatoService {
 
-    List<String> getZomatoDailyFromJsonFile(String restaurantId) throws IOException;
+    List<String> getZomatoDailyMenuFromJsonFile(String restaurantId) throws IOException;
 
-    List<String> getZomatoDailyFromJsonFull(String restaurantId) throws IOException;
+    List<String> getZomatoDailyMenuFromJsonFull(String restaurantId) throws IOException;
 
     List<String> getZomatoDailyMenuFromRestApi(String restaurantId) throws IOException;
 

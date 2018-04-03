@@ -56,23 +56,24 @@ public class ZomatoServiceImpl implements ZomatoService {
     public List<ZomatoRestaurantDto> getZomatoNearbyRestaurantFromRestApi(String latitude, String longtitude) throws IOException {
         String nearbyRestaurantJson = zomatoDataRestService.getNearbyRestaurants(latitude, longtitude);
         ObjectMapper mapper = new ObjectMapper();
-        JsonNode node = mapper.readTree(nearbyRestaurantJson).get(Constants.NEARBY_RESTAURANTS_NODE_NAME);
         List<ZomatoRestaurantDto> restaurantList = new ArrayList<>();
-        List<ZomatoRestaurantWrapperDto> result = mapper.readValue(node.toString(),
-                mapper.getTypeFactory().constructParametricType(List.class, ZomatoRestaurantWrapperDto.class));
+        JsonNode node = mapper.readTree(nearbyRestaurantJson).get(Constants.NEARBY_RESTAURANTS_NODE_NAME);
+        List<ZomatoRestaurantDto> zomatoRestaurantDtoList = new ArrayList<>();
 
-        for (ZomatoRestaurantWrapperDto restaurantWrapper: result) {
-            ZomatoRestaurantDto restaurant = restaurantWrapper.getRestaurant();
-
-            ZomatoDailyMenuWrapperDto[] dailyMenuWrappers = getDailyMenusForRestaurant(restaurant.getId().toString());
-
-            for (ZomatoDailyMenuWrapperDto dailyMenuWrapper : dailyMenuWrappers) {
-                restaurant.addDailyMenu(dailyMenuWrapper.getDailyMenu());
-            }
-            restaurantList.add(restaurant);
+        if (node.toString().equals(Constants.JSON_EMPTY_ARRAY)) {
+            return zomatoRestaurantDtoList;
         }
 
-        return restaurantList;
+        List<ZomatoRestaurantWrapperDto> result = mapper.readValue(node.toString(), mapper.getTypeFactory().constructParametricType(List.class, ZomatoRestaurantWrapperDto.class));
+        for (ZomatoRestaurantWrapperDto zomatoRestaurantWrapperDto : result) {
+            ZomatoRestaurantDto  restaurantDto = zomatoRestaurantWrapperDto.getRestaurant();
+            ZomatoDailyMenuWrapperDto[] zomatoDailyMenuWrapperDtos = getDailyMenusForRestaurant(restaurantDto.getId().toString());
+            for (ZomatoDailyMenuWrapperDto zomatoDailyMenuWrapperDto : zomatoDailyMenuWrapperDtos) {
+                restaurantDto.addDailyMenu(zomatoDailyMenuWrapperDto.getDailyMenu());
+            }
+            zomatoRestaurantDtoList.add(restaurantDto);
+        }
+        return zomatoRestaurantDtoList;
     }
 
 
@@ -97,7 +98,7 @@ public class ZomatoServiceImpl implements ZomatoService {
 
 
     /**
-     * Returns JSON string with
+     * Returns JSON string with daily menu
      *
      * @param inputStream
      * @return
@@ -153,7 +154,7 @@ public class ZomatoServiceImpl implements ZomatoService {
      * @throws IOException
      */
     @Cacheable(value = Constants.ZOMATO_CACHE_DAILY_MENUS_JSON, key = "#restaurantId.concat('-daily-menu-json')")
-    public List<String> getZomatoDailyFromJsonFile(String restaurantId) throws IOException {
+    public List<String> getZomatoDailyMenuFromJsonFile(String restaurantId) throws IOException {
         List<String> list = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
         TypeReference<List<DailyMenus>> typeReference = new TypeReference<List<DailyMenus>>(){};
@@ -184,7 +185,7 @@ public class ZomatoServiceImpl implements ZomatoService {
      * @throws IOException
      */
     @Cacheable(value = Constants.ZOMATO_CACHE_DAILY_MENUS_JSON_FULL, key = "#restaurantId.concat('-daily-menu-json')")
-    public List<String> getZomatoDailyFromJsonFull(String restaurantId) throws IOException {
+    public List<String> getZomatoDailyMenuFromJsonFull(String restaurantId) throws IOException {
         TypeReference<List<DailyMenus>> typeReference = new TypeReference<List<DailyMenus>>(){};
         InputStream inputStream = TypeReference.class.getResourceAsStream("/json/dailyMenu1.json");
         return getDailyMenuList(inputStream);

@@ -1,3 +1,15 @@
+# RUN
+mvn clean package
+http://localhost:8080/api
+
+# UNIT TEST
+
+## integration test
+mvn clean package verify
+
+## test
+mvn clean package test
+
 
 # zomato
 
@@ -41,12 +53,11 @@ https://developers.google.com/maps/documentation/javascript/get-api-key
 
 # charts
 http://www.chartjs.org/docs/latest/developers/api.html
+http://www.chartjs.org/samples/latest/
 
-# UNIT TEST
+# bxslider
+https://bxslider.com/install/
 
-## integration test
-mvn clean package verify
 
-## test
-mvn clean package test
+
 

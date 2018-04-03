@@ -51,14 +51,14 @@ public class ZomatoControllerTest {
         String daily_menu_id = "16506246";
 
         List<String> list = new ArrayList<>();
-        when(zomatoService.getZomatoDailyFromJsonFull(daily_menu_id)).thenReturn(list);
+        when(zomatoService.getZomatoDailyMenuFromJsonFull(daily_menu_id)).thenReturn(list);
 
         String viewName = zomatoController.zopatoApi(model);
         assertEquals("dailyMenu", viewName);
 
         ArgumentCaptor<List<String>> argumentCaptor = ArgumentCaptor.forClass(List.class);
 
-        verify(zomatoService, times(1)).getZomatoDailyFromJsonFull(daily_menu_id);
+        verify(zomatoService, times(1)).getZomatoDailyMenuFromJsonFull(daily_menu_id);
         verify(model, times(1)).addAttribute(eq("daily_menu"), argumentCaptor.capture());
 
         MockMvc mockMvc = MockMvcBuilders.standaloneSetup(zomatoController).build();

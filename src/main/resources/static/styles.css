@@ -17,3 +17,7 @@
 span.font-size-name {
     font-size: 40px;
 }
+
+.slider-margin-left {
+    margin-left: 50px !important;
+}
