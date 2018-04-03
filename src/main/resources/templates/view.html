@@ -48,21 +48,27 @@
             <h5 class="card-title"></h5>
 
             <div class="slider">
-                <div th:each="restaurant: ${restaurants}" class="slider-margin-left">
+                <div th:each="restaurant: ${restaurants}" class="slider-margin-left slider-margin-rights slider-width">
 
                     <!--<span th:text="${#strings.length(restaurant.dailyMenus)}"></span>-->
 
                     <!--<div th:if="${#strings.length(restaurant.dailyMenus)} &gt; 2">-->
-                        <span th:text="${restaurant.name}"></span>
+                        <h5 th:text="${restaurant.name}"></h5>
 
                         <div th:each="dailyMenu : ${restaurant.dailyMenus}">
 
                             <div th:each="dishWrapper : ${dailyMenu.dishes}">
 
-                                <span th:text="${dishWrapper.dish.name}"></span>
-                                <span th:if="${#strings.length(dishWrapper.dish.price)} &gt; 0">,
-                                    <span th:text="${dishWrapper.dish.price}"></span>
-                                </span>
+                                <div class="card" style="margin-top: 10px;">
+                                    <div class="card-header">
+                                        <h8 th:text="${dishWrapper.dish.name}"></h8>
+                                    </div>
+                                    <div class="card-body">
+                                        <span th:if="${#strings.length(dishWrapper.dish.price)} &gt; 0">
+                                            <span th:text="${dishWrapper.dish.price}"></span>
+                                        </span>
+                                    </div>
+                                </div>
 
                             </div>
 
