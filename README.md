@@ -58,6 +58,12 @@ http://www.chartjs.org/samples/latest/
 # bxslider
 https://bxslider.com/install/
 
+# jsonschema2pojo
+http://www.jsonschema2pojo.org/
+
+# apifaketory
+https://apifaketory.docs.apiary.io/#reference
+
 
 
 
