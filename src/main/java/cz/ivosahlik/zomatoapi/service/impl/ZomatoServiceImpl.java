@@ -56,7 +56,6 @@ public class ZomatoServiceImpl implements ZomatoService {
     public List<ZomatoRestaurantDto> getZomatoNearbyRestaurantFromRestApi(String latitude, String longtitude) throws IOException {
         String nearbyRestaurantJson = zomatoDataRestService.getNearbyRestaurants(latitude, longtitude);
         ObjectMapper mapper = new ObjectMapper();
-        List<ZomatoRestaurantDto> restaurantList = new ArrayList<>();
         JsonNode node = mapper.readTree(nearbyRestaurantJson).get(Constants.NEARBY_RESTAURANTS_NODE_NAME);
         List<ZomatoRestaurantDto> zomatoRestaurantDtoList = new ArrayList<>();
 

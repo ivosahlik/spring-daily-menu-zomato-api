@@ -82,6 +82,7 @@ public class ZomatoDataRestServiceImpl implements ZomatoDataRestService {
         Map<String, String> nearbyRestauransParam = new HashMap<>();
         nearbyRestauransParam.put(REST_API_PARAM_LATITUDE, latitude);
         nearbyRestauransParam.put(REST_API_PARAM_LONGITUDE, longtitude);
+
         HttpEntity<?> entity = getHttpEntityForRestRequest();
         String nearbyRestaurants = null;
         nearbyRestaurants = restTemplate.postForObject(nearbyRestaurantUrl, entity, String.class, nearbyRestauransParam);
@@ -100,7 +101,7 @@ public class ZomatoDataRestServiceImpl implements ZomatoDataRestService {
         map.put(REST_API_PARAM_ID, restaurantId);
         HttpEntity<?> entity = getHttpEntityForRestRequest();
         String restaurantJSONString = null;
-        restaurantJSONString = restTemplate.postForObject(restaurantByIdUrl, entity, String.class, restaurantId);
+        restaurantJSONString = restTemplate.postForObject(restaurantByIdUrl, entity, String.class, map);
         return restaurantJSONString;
     }
 
