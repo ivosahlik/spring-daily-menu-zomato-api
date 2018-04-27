@@ -64,6 +64,14 @@ http://www.jsonschema2pojo.org/
 # apifaketory
 https://apifaketory.docs.apiary.io/#reference
 
+#Swagger 2
+http://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
+
+http://localhost:8080/v2/api-docs
+
+## without spring security
+http://localhost:8080/swagger-ui.html
+
 
 
 

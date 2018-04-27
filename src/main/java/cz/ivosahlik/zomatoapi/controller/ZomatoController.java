@@ -3,6 +3,7 @@ package cz.ivosahlik.zomatoapi.controller;
 import cz.ivosahlik.zomatoapi.enumeration.GeoCodeEnum;
 import cz.ivosahlik.zomatoapi.service.ZomatoService;
 
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,6 +22,7 @@ import java.util.Map;
  * Intellij Idea
  * Created by ivosahlik on 20/03/2018
  */
+@Api            // swagger2
 @Slf4j
 @RequestMapping(ZomatoController.BASE_URL)
 @Controller
