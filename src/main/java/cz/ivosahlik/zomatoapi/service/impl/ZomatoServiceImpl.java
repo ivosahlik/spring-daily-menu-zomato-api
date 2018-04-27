@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Intellij Idea
@@ -109,6 +110,12 @@ public class ZomatoServiceImpl implements ZomatoService {
         JsonNode node = mapper.readTree(inputStream).get(Constants.DAILY_MENUS_NODE_NAME);
         ZomatoDailyMenuWrapperDto[] dailyMenuWrappers = mapper.readValue(node.toString(), ZomatoDailyMenuWrapperDto[].class);
 
+//        ZomatoDailyMenuDto zomatoDailyMenuDto = dailyMenuWrappers[0].getDailyMenu();
+//        for (ZomatoDishWrapperDto zomatoDishWrapperDto : zomatoDailyMenuDto.getDishes()) {
+//            ZomatoDishDto data = zomatoDishWrapperDto.getDish();
+//            list.add(data.getName() + (data.getPrice().length() == 0 ? "" : ", ") + data.getPrice());
+//        }
+
         ZomatoDailyMenuDto zomatoDailyMenuDto = dailyMenuWrappers[0].getDailyMenu();
         for (ZomatoDishWrapperDto zomatoDishWrapperDto : zomatoDailyMenuDto.getDishes()) {
             ZomatoDishDto data = zomatoDishWrapperDto.getDish();
@@ -137,6 +144,7 @@ public class ZomatoServiceImpl implements ZomatoService {
 
         JsonNode locationJson = rootNode.get("location");
         Map<String, String> locationMap = mapper.convertValue(locationJson, Map.class);
+
         for (Map.Entry<String, String> entry : locationMap.entrySet()) {
             map.put(entry.getKey().toString(), String.valueOf(entry.getValue()));
         }
@@ -160,13 +168,21 @@ public class ZomatoServiceImpl implements ZomatoService {
         InputStream inputStream = TypeReference.class.getResourceAsStream("/json/test.json");
         try {
             List<DailyMenus> dailyMenusList = mapper.readValue(inputStream,typeReference);
-            for ( DailyMenus str : dailyMenusList) {
+            dailyMenusList.stream().forEach(str -> {
                 DailyMenu dailyMenu = str.getDailyMenu();
-                for (Dishes dishes : dailyMenu.getDishes()) {
+                dailyMenu.getDishes().stream().forEach(dishes -> {
                     Dish dish = dishes.getDish();
                     list.add(dish.getName() + " " + dish.getPrice());
-                }
-            }
+                });
+            });
+
+//            for ( DailyMenus str : dailyMenusList) {
+//                DailyMenu dailyMenu = str.getDailyMenu();
+//                for (Dishes dishes : dailyMenu.getDishes()) {
+//                    Dish dish = dishes.getDish();
+//                    list.add(dish.getName() + " " + dish.getPrice());
+//                }
+//            }
 
         } catch (IOException e){
             log.error(e.getMessage());
