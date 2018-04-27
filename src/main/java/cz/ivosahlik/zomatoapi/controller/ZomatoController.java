@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
@@ -19,8 +20,11 @@ import java.util.Map;
  * Created by ivosahlik on 20/03/2018
  */
 @Slf4j
+@RequestMapping(ZomatoController.BASE_URL)
 @Controller
 public class ZomatoController {
+
+    public static final String BASE_URL = "/api";
 
     private ZomatoService zomatoService;
 
@@ -28,7 +32,7 @@ public class ZomatoController {
         this.zomatoService = zomatoService;
     }
 
-    @GetMapping("/api")
+    @GetMapping("/")
     public String zopatoApi(Model model) throws IOException {
 
         model.addAttribute("restaurants",
