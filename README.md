@@ -2,6 +2,16 @@
 mvn clean package
 http://localhost:8080/api
 
+## run app via nohup
+nohup java -jar /home/workspace/spring-daily-menu-zomato-api/target/zomatoapi.jar 2>log.out &
+tail -f nohup.out
+
+## kill app
+ps -ef | grep java
+kill 9 {id}
+
+## ---------------------------------------
+
 # UNIT TEST
 
 ## integration test

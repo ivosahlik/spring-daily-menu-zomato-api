@@ -62,7 +62,8 @@ public class ZomatoControllerTest {
 //        verify(model, times(1)).addAttribute(eq("daily_menu"), argumentCaptor.capture());
 
         MockMvc mockMvc = MockMvcBuilders.standaloneSetup(zomatoController).build();
-        mockMvc.perform(get("/api"))
+        // mockMvc.perform(get("/api"))
+        mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("view"));
 
