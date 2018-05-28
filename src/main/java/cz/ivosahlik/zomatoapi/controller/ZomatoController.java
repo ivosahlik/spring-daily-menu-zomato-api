@@ -31,6 +31,8 @@ public class ZomatoController {
     //public static final String BASE_URL = "/api";
     public static final String BASE_URL = "/";
 
+    private static final String PARAM_VIEW = "view";
+
     private ZomatoService zomatoService;
 
     public ZomatoController(ZomatoService zomatoService) {
@@ -56,7 +58,7 @@ public class ZomatoController {
 //        }
 
 //        return "dailyMenu";
-        return "view";
+        return PARAM_VIEW;
 
     }
 
