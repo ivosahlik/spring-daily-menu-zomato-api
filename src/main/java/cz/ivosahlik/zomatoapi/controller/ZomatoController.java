@@ -28,7 +28,10 @@ import java.util.Map;
 @Controller
 public class ZomatoController {
 
-    public static final String BASE_URL = "/api";
+    //public static final String BASE_URL = "/api";
+    public static final String BASE_URL = "/";
+
+    private static final String PARAM_VIEW = "view";
 
     private static final String PARAM_VIEW = "view";
 
