@@ -33,8 +33,6 @@ public class ZomatoController {
 
     private static final String PARAM_VIEW = "view";
 
-    private static final String PARAM_VIEW = "view";
-
     private ZomatoService zomatoService;
 
     public ZomatoController(ZomatoService zomatoService) {
